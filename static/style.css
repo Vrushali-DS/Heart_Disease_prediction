@@ -1,0 +1,357 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #eef2ff, #f8fafc);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 45px auto;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 40px;
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+h1 {
+    text-align: center;
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 800;
+
+    color: #0f172a;
+
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #64748b;
+
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    background: #f8fafc;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+label {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #334155;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    font-size: 15px;
+
+    color: #1e293b;
+
+    background: white;
+
+    border: 2px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Input hover */
+
+input:hover,
+select:hover {
+    border-color: #94a3b8;
+}
+
+
+/* Input focus */
+
+input:focus,
+select:focus {
+    border-color: #0891b2;
+
+    box-shadow:
+        0 0 0 4px rgba(8, 145, 178, 0.12);
+
+    background: #ffffff;
+}
+
+
+/* =========================
+   PREDICT BUTTON
+========================= */
+
+button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #0891b2,
+        #2563eb
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+
+    transition: all 0.25s ease;
+}
+
+
+/* Button hover */
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+
+/* Button click */
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.result {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #ecfeff,
+        #eff6ff
+    );
+
+    border: 1px solid #bae6fd;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.result h2 {
+    margin: 0;
+
+    font-size: 24px;
+
+    color: #0f172a;
+}
+
+.result small {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PAGE TOP DECORATION
+========================= */
+
+.container::before {
+    content: "❤️";
+
+    display: block;
+
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+
+        margin: 20px auto;
+
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+
+        gap: 18px;
+    }
+
+    button {
+        font-size: 16px;
+
+        padding: 14px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 96%;
+
+        padding: 17px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .grid {
+        padding: 15px;
+    }
+
+    input,
+    select {
+        padding: 11px;
+    }
+}
